@@ -1,0 +1,10 @@
+--
+- name: Deploy Maven Artifact
+  hosts: localhost
+  become: yes
+
+  tasks:
+    - name: Copy jar file
+      copy:
+        src: /home/student/.jenkins/workspace/varun_6/target/my-app-1.0-SNAPSHOT.jar
+        dest: /home/student/Target/
